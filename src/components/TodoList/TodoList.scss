@@ -1,0 +1,157 @@
+$table-background-color: #ffffff;
+$table-hover-background-color: darken($table-background-color, 8%);
+$table-even-background-color: darken($table-background-color, 4%);
+$table-header-color: #ffffff;
+$table-header-background-color: #8f8f8f;
+
+.todos {
+  &__table {
+    background-color: $table-background-color;
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+
+    @media (max-width: 580px) {
+      font-size: 14px;
+    }
+
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+      th,
+      td {
+        padding: 15px;
+
+        @media (max-width: 580px) {
+          padding: 8px;
+        }
+      }
+      th {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        color: $table-header-color;
+        background-color: $table-header-background-color;
+        border-bottom: solid 2px #d8d8d8;
+      }
+      td {
+        border: solid 1px #d8d8d8;
+        border-left: 0;
+        border-right: 0;
+        vertical-align: middle;
+      }
+    }
+    tbody tr {
+      transition: background-color 150ms ease-out;
+      &:nth-child(2n) {
+        background-color: $table-even-background-color;
+      }
+      &:hover {
+        background-color: $table-hover-background-color;
+      }
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+
+    p {
+      text-align: right;
+    }
+  }
+
+  &__body-row {
+    position: relative;
+  }
+
+  &__is-completed {
+    text-decoration: line-through;
+  }
+
+  &__title-head {
+    width: 100%;
+    padding: 0;
+  }
+
+  &__title {
+    line-height: 44px;
+
+    &:hover {
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+
+  &__edit-column {
+    width: 115px;
+  }
+
+  &__edit-buttons {
+    display: flex;
+  }
+
+  &__edit {
+    width: 40px;
+    margin: 0 0 0 45px;
+    color: #fff;
+    border: rgb(60 113 255) solid 2px;
+    background:
+      center / 50% no-repeat url('../../assets/icons/edit-white.svg'),
+      rgb(60 113 255);
+    
+    &:hover {
+      background:
+        center / 50% no-repeat url('../../assets/icons/edit-blue.svg'),
+        #fff;
+    }
+  }
+
+  &__remove {
+    width: 40px;
+    color: #fff;
+    border: rgb(250, 64, 64) solid 2px;
+    background:
+      center / 50% no-repeat url('../../assets/icons/delete-white.svg'),
+      rgb(250, 64, 64);
+
+    &:hover {
+      background:
+        center / 50% no-repeat url('../../assets/icons/delete-red.svg'),
+        #fff;
+    }
+  }
+
+  &__edit-input {
+    font-size: inherit;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px 5px;
+    width: 100%;
+  }
+
+  &__edit-accept {
+    margin-right: 5px;
+    width: 40px;
+    background: center / 50% no-repeat url('../../assets/icons/accept.svg'),
+  }
+
+  &__edit-cancel {
+    width: 40px;
+    background: center / 50% no-repeat url('../../assets/icons/cross.svg'),
+  }
+
+  &__notification {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+}

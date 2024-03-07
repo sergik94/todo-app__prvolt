@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+import { AddingTodo } from './components/AddingTodo'
+import { TodoList } from './components/TodoList'
+
+import './App.scss'
+import { TodoFilter } from './TodoFilter'
+import { FilteredBy } from './types/FilteredBy'
+
+export const App: React.FC = () => {
+  const [filteredBy, selectFilteredBy] = useState(FilteredBy.ALL)
+
+  const handleFilteredBy = (e: React.FormEvent<HTMLSelectElement>): void => {
+    const value = e.currentTarget.value as FilteredBy
+    selectFilteredBy(value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div className="app">
+        <div className="app__container _container">
+          <h1 className="app__title">Todos</h1>
 
-export default App;
+          <AddingTodo />
+
+          <TodoFilter filteredBy={filteredBy} handleFilteredBy={handleFilteredBy} />
+          <TodoList filteredBy={filteredBy} />
+        </div>
+      </div>
+    </>
+  )
+}
