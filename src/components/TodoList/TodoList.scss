@@ -5,6 +5,7 @@ $table-header-color: #ffffff;
 $table-header-background-color: #8f8f8f;
 
 .todos {
+  overflow-x: auto;
   &__table {
     background-color: $table-background-color;
     font-size: 20px;
