@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/todo-app__prvolt/static/css/main.9b322b0f.css",
+    "main.js": "/todo-app__prvolt/static/js/main.fc876530.js",
+    "static/media/Avoda.ttf": "/todo-app__prvolt/static/media/Avoda.f42abd36885b3e4015c0.ttf",
+    "static/media/GothamPro-Bold.ttf": "/todo-app__prvolt/static/media/GothamPro-Bold.764ba13de4409a990823.ttf",
+    "static/media/GothamPro-Medium.ttf": "/todo-app__prvolt/static/media/GothamPro-Medium.dca4b95d345c2abd8661.ttf",
+    "static/media/GothamPro.ttf": "/todo-app__prvolt/static/media/GothamPro.4f71921a0823129cd8ba.ttf",
+    "static/media/GothamPro-Black.ttf": "/todo-app__prvolt/static/media/GothamPro-Black.8c2f478dfa880e2de0a1.ttf",
+    "static/media/delete-red.svg": "/todo-app__prvolt/static/media/delete-red.89d758b818ac2ae9d734.svg",
+    "static/media/delete-white.svg": "/todo-app__prvolt/static/media/delete-white.20e118c878a9e2eccbfb.svg",
+    "static/media/accept.svg": "/todo-app__prvolt/static/media/accept.d870bc19bc9e429053dd.svg",
+    "static/media/edit-blue.svg": "/todo-app__prvolt/static/media/edit-blue.1a3d8e6c4b07ea11e1e6.svg",
+    "static/media/edit-white.svg": "/todo-app__prvolt/static/media/edit-white.2619d50110fedbbeeab4.svg",
+    "static/media/cross.svg": "/todo-app__prvolt/static/media/cross.a420ad6907f7db14f3e6.svg",
+    "index.html": "/todo-app__prvolt/index.html",
+    "main.9b322b0f.css.map": "/todo-app__prvolt/static/css/main.9b322b0f.css.map",
+    "main.fc876530.js.map": "/todo-app__prvolt/static/js/main.fc876530.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b322b0f.css",
+    "static/js/main.fc876530.js"
+  ]
+}
